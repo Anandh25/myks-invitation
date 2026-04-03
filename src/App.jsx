@@ -12,10 +12,16 @@ import { ArrowUp } from "lucide-react";
 const App = () => {
   const audioRef = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showHint, setShowHint] = useState(true);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowHint(false), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
@@ -41,7 +47,7 @@ const App = () => {
       </audio>
 
       <button
-        className="fixed bottom-5 left-5 z-50 bg-black text-white px-4 py-2 rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer  flex items-center gap-2"
+        className="fixed bottom-16 sm:bottom-5 left-4 sm:left-5 z-50 bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer flex items-center gap-2"
         onClick={toggleMusic}
       >
         <span className={`${isPlaying ? "slow-spin" : "animate-bounce"}`}>
@@ -54,6 +60,12 @@ const App = () => {
           <span className={`wave ${isPlaying ? "active delay-1" : ""}`}></span>
           <span className={`wave ${isPlaying ? "active delay-2" : ""}`}></span>
         </div>
+
+        {showHint && (
+          <span className="absolute -top-10 left-0 bg-black text-white text-xs px-2 py-1 rounded-md animate-bounce whitespace-nowrap">
+            Tap for music 🎶
+          </span>
+        )}
       </button>
 
       <Hero />

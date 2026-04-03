@@ -24,7 +24,7 @@ const Invitation = () => {
         scrollTrigger: {
           trigger: imageRef.current,
           start: "top 80%",
-          toggleActions: "play none more reverse",
+          toggleActions: "play none none none",
         },
       },
     );
@@ -40,24 +40,27 @@ const Invitation = () => {
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 80%",
-          toggleActions: "play none more reverse",
+          toggleActions: "play none none none",
         },
       },
     );
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 } });
-        }
+    const trigger = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top 75%", // 🔥 adjust this
+      once: true, // 🔥 important
+      onEnter: () => {
+        confetti({
+          particleCount: window.innerWidth < 768 ? 80 : 150,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
       },
-      { threshold: 0.2 },
-    );
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    });
+
+    return () => trigger.kill();
   }, []);
   return (
     <section className="py-16 sm:py-20 bg-pink-50 px-4" ref={sectionRef}>

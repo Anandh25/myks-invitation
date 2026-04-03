@@ -41,11 +41,11 @@ const Story = () => {
       {/* Timeline */}
       <div ref={containerRef} className="relative max-w-4xl mx-auto px-4">
         {/* Vertical Line */}
-        <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-[2px] h-full bg-gray-200"></div>
+        <div className="absolute left-10 md:left-1/2 md:-translate-x-1/2 w-[2px] h-full bg-gray-200"></div>
 
         {/* Item 1 */}
         <div className="timeline-item mb-10 flex flex-col md:flex-row md:justify-start relative">
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
+          <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 top-2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
           <div className="ml-10 md:ml-0 md:w-1/2 md:pr-8 text-left md:text-right hover:scale-105 transition duration-300 cursor-pointer">
             <h3 className="text-lg sm:text-xl font-medium">
               How it all started
@@ -58,7 +58,7 @@ const Story = () => {
 
         {/* Item 2 */}
         <div className="timeline-item mb-10 flex flex-col md:flex-row md:justify-end relative">
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
+          <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 top-2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
           <div className="ml-10 md:ml-0 md:w-1/2 md:pl-8 text-left hover:scale-105 transition duration-300 cursor-pointer">
             <h3 className="text-lg sm:text-xl font-medium">Falling in love</h3>
             <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
@@ -69,7 +69,7 @@ const Story = () => {
 
         {/* Item 3 */}
         <div className="timeline-item mb-10 flex flex-col md:flex-row md:justify-start relative">
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
+          <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 top-2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
           <div className="ml-10 md:ml-0 md:w-1/2 md:pr-8 text-left md:text-right hover:scale-105 transition duration-300 cursor-pointer">
             <h3 className="text-lg sm:text-xl font-medium">The Proposal</h3>
             <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
@@ -80,10 +80,10 @@ const Story = () => {
 
         {/* Item 4 */}
         <div className="timeline-item mb-10 flex flex-col md:flex-row md:justify-end relative">
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
+          <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 top-2 w-3 h-3 bg-yellow-400 rounded-full border-4 border-white"></div>
           <div className="ml-10 md:ml-0 md:w-1/2 md:pl-8 text-left hover:scale-105 transition duration-300 cursor-pointer">
             <h3 className="text-lg sm:text-xl font-medium">The Big Day</h3>
-            <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-text-base">
+            <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
               The beginning of a new chapter together 💍
             </p>
           </div>
