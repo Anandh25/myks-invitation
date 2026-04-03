@@ -47,7 +47,7 @@ const App = () => {
       </audio>
 
       <button
-        className="fixed bottom-16 sm:bottom-5 left-4 sm:left-5 z-50 bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer flex items-center gap-2"
+        className="fixed bottom-5 sm:bottom-5 left-4 sm:left-5 z-50 bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer flex items-center gap-2"
         onClick={toggleMusic}
       >
         <span className={`${isPlaying ? "slow-spin" : "animate-bounce"}`}>
