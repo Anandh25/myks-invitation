@@ -2,56 +2,72 @@ import React from "react";
 
 const Events = () => {
   return (
-    <section className="py-16 sm:py-20 bg-pink-50">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-pink-50 to-white">
+      {/* Section Title */}
       <div className="text-center mb-12 sm:mb-16">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-wide">
           Wedding Events
         </h2>
         <div className="w-16 h-[2px] bg-yellow-400 mx-auto mt-3 sm:mt-4"></div>
       </div>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-4">
-        <div className="bg-white p-5 sm:p-6 md:p-8 rounded-xl shadow-md transition duration-300 active:scale-95 hover:scale-105">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4">
-            Wedding Ceremony
+      {/* Events Container */}
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+        {/* Christian Wedding */}
+        <div
+          className="bg-white/80 p-6 md:p-10 rounded-lg border border-gray-200 text-center
+          transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+        >
+          <h3 className="text-xl md:text-2xl font-semibold tracking-wide">
+            ✝️ Christian Wedding
           </h3>
-          <p className="text-gray-600 text-sm sm:text-base">
-            📅 13 September 2026
+
+          <div className="w-10 h-[2px] bg-yellow-400 mx-auto mt-2 mb-4"></div>
+
+          <p className="text-gray-700 mt-3">📅 13 September 2026</p>
+          <p className="text-gray-700 mt-2">⏰ 06:00 AM – 07:30 AM</p>
+
+          <p className="text-gray-500 text-sm mt-2">📍 Church, Coimbatore</p>
+
+          <p className="text-gray-500 text-sm italic mt-3">
+            Holy Matrimony Ceremony & Blessings
           </p>
-          <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
-            ⏰ 06:00 AM - 07:30 AM
-          </p>
-          <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
-            📍 Tirupur
-          </p>
+
           <a
-            href="https://www.google.com/maps/place/Tiruppur,+Tamil+Nadu/data=!4m2!3m1!1s0x3ba907b0424d75b9:0x4750551698a91687?sa=X&ved=1t:242&ictx=111"
+            href="https://www.google.com/maps/place/Tiruppur,+Tamil+Nadu"
             target="_blank"
-            className="inline-block mt-3 sm:mt-4 text-yellow-500 underline text-sm sm:text-base"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 text-yellow-600 text-sm underline"
           >
             View on Map
           </a>
         </div>
-        <div className="bg-white p-5 sm:p-6 md:p-8 rounded-xl shadow-md transition duration-300 active:scale-95 hover:scale-105">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4">
-            Reception
+
+        {/* Hindu Wedding */}
+        <div
+          className="bg-white/80 p-6 md:p-10 rounded-lg border border-gray-200 text-center
+          transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+        >
+          <h3 className="text-xl md:text-2xl font-semibold tracking-wide">
+            🕉️ Hindu Wedding
           </h3>
 
-          <p className="text-gray-600 text-sm sm:text-base">
-            📅 12 September 2026
-          </p>
-          <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
-            ⏰ 6:00 PM
-          </p>
-          <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
-            📍 Tirupur
+          <div className="w-10 h-[2px] bg-yellow-400 mx-auto mt-2 mb-4"></div>
+
+          <p className="text-gray-700 mt-3">📅 16 September 2026</p>
+          <p className="text-gray-700 mt-2">⏰ Muhurtham: 06:30 AM</p>
+
+          <p className="text-gray-500 text-sm mt-2">📍 Temple, Trichy</p>
+
+          <p className="text-gray-500 text-sm italic mt-3">
+            Traditional Rituals, Mangalsutra & Sapthapadi
           </p>
 
           <a
-            href="https://www.google.com/maps/place/Tiruppur,+Tamil+Nadu/data=!4m2!3m1!1s0x3ba907b0424d75b9:0x4750551698a91687?sa=X&ved=1t:242&ictx=111"
+            href="https://maps.app.goo.gl/4vngJvX4RiNmmoh18"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-3 sm:mt-4 text-yellow-500 underline text-sm sm:text-base"
+            className="inline-block mt-4 text-yellow-600 text-sm underline"
           >
             View on Map
           </a>
